@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.uipeople.schedule"
+    android:versionCode="6"
+    android:versionName="0.91" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="10" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- GCM 관련 퍼미션 -->
+	<permission android:name="com.uipeople.schedule.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+ 
+	<uses-permission android:name="com.uipeople.schedule.permission.C2D_MESSAGE" /> 
+	<!-- GCM 받기 -->
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<!-- GCM을 받으려면 구글 계정 필요 -->
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<!-- 메시지 받을 때 wake up 하기 위해 -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<!-- 네트워크 접속 권한 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+     
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyActionBar" >
+        <receiver android:name="TimeTableProvider">
+			 <intent-filter>
+				 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+				 <action android:name="android.appwidget.action.notify"/>
+			 </intent-filter>
+			 <meta-data android:resource="@xml/timetable_provider" 
+				 android:name="android.appwidget.provider"/>
+		 </receiver>
+		 <receiver android:name="TimeTableProviderMedium">
+			 <intent-filter>
+				 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+				 <action android:name="android.appwidget.action.notify"/>
+			 </intent-filter>
+			 <meta-data android:resource="@xml/timetable_provider_medium" 
+				 android:name="android.appwidget.provider"/>
+		 </receiver>
+		 <service android:name="TimeTableWidget"
+		     android:permission="android.permission.BIND_REMOTEVIEWS" ></service>
+		 
+		 <receiver 
+		   android:name="com.google.android.gcm.GCMBroadcastReceiver"
+		 
+		   android:permission="com.google.android.c2dm.permission.SEND" >
+		   <intent-filter>
+		      <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+		      <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+		      <category android:name="com.uipeople.schedule" />
+		   </intent-filter>
+		</receiver>
+		<service android:name=".GCMIntentService" /><!-- 서비스명 변경하면 안됨 -->
+		 
+		<activity android:name="WidgetConfig"               
+		    android:label="Widget Config">         
+		    <intent-filter>             
+		        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />         
+		    </intent-filter>     
+	    </activity>
+        <activity
+            android:name="com.uipeople.schedule.MainActivity"
+            android:label="@string/app_name"             
+	   		android:theme="@android:style/Theme.Black.NoTitleBar" android:screenOrientation="portrait"
+	   		android:launchMode="singleTask">         
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name="com.uipeople.schedule.ClassActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+          <intent-filter>
+                <action android:name="android.intent.action.CLASS" />
+                <category android:name="android.intent.category.CLASS" />
+            </intent-filter>
+          <activity
+            android:name="com.uipeople.schedule.SetupActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+          <activity
+            android:name="com.uipeople.schedule.VersionActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+          <activity
+            android:name="com.uipeople.schedule.HelpActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+              <activity
+            android:name="com.uipeople.schedule.HelpFirstActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+              
+              <activity
+            android:name="com.uipeople.schedule.HelpEditDeleteActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+              
+              <activity
+            android:name="com.uipeople.schedule.HelpMenuActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+              
+              <activity
+            android:name="com.uipeople.schedule.HelpBackgroundActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+              
+            <activity
+            android:name="com.uipeople.schedule.HelpFirstStartActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.TLoginActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.RegisterActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendAddActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendSearchActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendRequestedActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendRecommandedActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendResultActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendNoticeActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.ProfileActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+            <activity
+            android:name="com.uipeople.schedule.LoginNateOnActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendRecommandedNateOnActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendTimetableActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+            <activity
+            android:name="com.uipeople.schedule.FriendSearchSubjectActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+             <activity
+            android:name="com.uipeople.schedule.FriendSearchDetailActivity"
+            android:label="class"             
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"
+           android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

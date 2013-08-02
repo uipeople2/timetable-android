@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+    <ImageView
+        android:id="@+id/iv_one" 
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="#ff6677"
+    	android:scaleType="fitXY"
+    />
+    	
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+    
+    <com.uipeople.schedule.TimeTableControl 
+    	android:layout_width="120dip" 
+    	android:layout_height="450dip" 
+    	android:id="@+id/daily" 
+    	android:background="@drawable/drop_shadow"
+    	>
+	</com.uipeople.schedule.TimeTableControl>
+    </RelativeLayout>
+</RelativeLayout>

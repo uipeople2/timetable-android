@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="115dp"
+  	android:layout_height="fill_parent"
+  	android:orientation="vertical"
+  	android:background="@drawable/drop_shadow"
+  	android:id="@+id/table"
+  	>
+  	<TextView 
+  	    android:id="@+id/weekday"
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="40dp"
+	  	android:text="Mon"
+	  	android:textStyle="bold"
+	  	android:textSize="20dip"
+	  	android:background="@+drawable/grey_top_round_shape"
+	  	android:gravity="center"
+	  	android:textColor="@color/cream"
+	  	 />
+  	
+	  <ListView 
+	  android:id="@+id/words"
+	  android:layout_width="wrap_content"
+	  android:layout_height="fill_parent"
+	  android:divider="@null"
+	  android:dividerHeight="0dp"
+	  android:layout_marginBottom="5dp"
+	  />
+</LinearLayout>

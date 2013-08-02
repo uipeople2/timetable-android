@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    xmlns:app="http://schemas.android.com/apk/res/com.uipeople.schedule">
+	
+    <LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    >
+	    <com.uipeople.schedule.CustomViewPager
+	        android:id="@+id/pager"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        />
+	    
+	</LinearLayout>
+	
+        <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+            >
+			<com.uipeople.schedule.PathButton
+			    android:id="@+id/setting"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	           	android:layout_alignParentRight="true"
+	            android:layout_alignParentBottom="true"
+	            android:layout_marginRight="4dp"
+	            android:layout_marginBottom="4dp"
+	            android:src="@drawable/menu_setting"
+	            android:background="@drawable/drop_shadow_circle"
+	            android:visibility="visible">
+			</com.uipeople.schedule.PathButton> 
+			<com.uipeople.schedule.PathButton
+			    android:id="@+id/share"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginBottom="4dp"
+            	android:layout_marginRight="4dp"
+	            android:src="@drawable/menu_share"
+	            android:background="@drawable/drop_shadow_circle"
+	            android:visibility="visible">
+	            
+			</com.uipeople.schedule.PathButton>  
+			<com.uipeople.schedule.PathButton
+			    android:id="@+id/photo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginBottom="4dp"
+            	android:layout_marginRight="4dp"
+	            android:src="@drawable/menu_photo"
+	            android:background="@drawable/drop_shadow_circle"
+	            android:visibility="visible">
+			</com.uipeople.schedule.PathButton> 
+			<com.uipeople.schedule.PathButton
+			    android:id="@+id/list"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginBottom="4dp"
+            	android:layout_marginRight="4dp"
+	            android:src="@drawable/menu_list"
+	            android:background="@drawable/drop_shadow_circle"
+	            android:visibility="visible">
+			</com.uipeople.schedule.PathButton> 
+		
+			<ImageButton
+                    android:id="@+id/plus_button"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentBottom="true"
+		            android:src="@drawable/menu_1"
+		            android:layout_marginBottom="4dp"
+            		android:layout_marginRight="4dp"
+            		android:background="@drawable/drop_shadow_circle">
+            </ImageButton>
+        </RelativeLayout>
+         <com.viewpagerindicator.CirclePageIndicator
+	        android:id="@+id/indicator"
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginBottom="5dip"
+	        />
+       
+</RelativeLayout>

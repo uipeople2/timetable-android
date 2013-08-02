@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Today Class</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+	<string name="init">Initialize</string>
+	<string name="version_info">Version Info</string>
+	<string name="period">Period</string>
+	<string name="setting">Setting</string>
+	<string name="timetable_setting">TimeTable Setting</string>
+	<string name="thema">Thema</string>
+	<string name="dayofweek_setting">Week</string>
+	<string name="friday">Friday</string>
+	<string name="saturday">Saturday</string>
+	<string name="optional_setting">Optional Setting</string>
+	<string name="help">Help</string>
+	<string name="todayclass_info">Today Class Info</string>
+	<string name="help_first">Getting start</string>
+	<string name="help_menu">Menu</string>
+	<string name="help_edit_delete">Edit / Delete</string>
+	<string name="help_background">Change background</string>
+	<string name="check_init">Are you sure?</string>
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+	<string name="initialized">Initialized</string>
+	<string name="choose_to_edit">Choose to edit a class</string>
+	<string name="subject">Subject</string>
+	<string name="contacts">Contacts</string>
+	<string name="teacher">Teacher</string>
+	<string name="phone">Phone</string>
+	<string name="email">Email</string>
+	<string name="room">Room</string>
+	<string name="take_photo">Take a photo</string>
+	<string name="choose_existing">Choose existing</string>
+	<string name="delete">Delete</string>
+	<string name="start">Start</string>
+	<string name="timetable_add">Timetable add</string>
+	<string name="click_to_memo">Click to memo</string>
+</resources>

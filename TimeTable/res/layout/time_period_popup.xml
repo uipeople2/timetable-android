@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@+drawable/shape_window"
+    >
+     <TableLayout 
+        android:id="@+id/item"
+        android:layout_width="250dip"
+    	android:layout_height="wrap_content"
+    	android:stretchColumns="1"
+    	android:background="@drawable/white_detail_background"
+    	android:layout_centerHorizontal="true"
+    	android:layout_marginTop="100dip"
+    	>
+        <TableRow >
+            <TextView 
+                android:layout_column="1"
+     		   	android:id="@+id/header"
+		     	android:layout_width="wrap_content"
+		     	android:layout_height="30dip"
+		     	android:textColor="@color/lime"
+		     	android:text="수업시간을 선택하세요"
+		     	android:textSize="20dip"
+		     	android:gravity="center_vertical"
+		     	android:paddingLeft="10dip"
+		    />
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+		     	android:layout_height="wrap_content"
+		     	android:paddingRight="10dip" 
+		     	android:src="@drawable/close_dw"
+		     	android:layout_gravity="center_vertical"
+            />
+            </TableRow>
+	        <View 
+	        android:layout_height="1dip"
+	        android:layout_width="fill_parent"
+	        android:background="@color/lime"        
+	        android:layout_margin="5dip"
+	         />    
+
+	<ScrollView 
+	    android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+	<RadioGroup
+        android:id="@+id/radiogroup1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </RadioGroup>
+    </ScrollView>
+    </TableLayout>
+</RelativeLayout>

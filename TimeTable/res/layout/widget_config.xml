@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+	    android:id="@+id/setupTimeTable"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@+drawable/drop_shadow_setup"    
+	    android:layout_marginLeft="10dip"
+	    android:layout_marginRight="10dip"
+	    >
+    	<TextView
+			android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text="@+string/thema"
+    		android:textSize="20dip"
+    		android:textStyle="bold" 
+    	    android:textColor="#707070"
+    		android:paddingLeft="10dip"
+    		android:padding="15dip"
+    	>
+		</TextView>
+		<CheckBox
+		    android:id="@+id/grey"
+			android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text=" GREY"
+    		android:layout_marginLeft="0dip"
+    		android:textSize="20dip"
+    		android:textColor="#707070"
+    		/>
+    	<CheckBox
+    	    android:id="@+id/white"
+			android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text=" WHITE"
+    		android:textSize="20dip"
+    		android:textColor="#707070" 
+    		android:layout_marginLeft="8dip"
+    		/>
+    </LinearLayout>
+    
+	    <Button android:id="@+id/okconfig" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="OK" />
+</LinearLayout>

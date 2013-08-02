@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#eeeeee" 
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/layout"
+    > 
+     
+ <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#434343"
+    >
+ <Button
+    android:id="@+id/back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@+drawable/addclass_back2x" 
+    android:text="Back"
+    android:gravity="center"
+    android:textColor="@+color/cream"
+    android:textStyle="bold"
+	android:textSize="17sp"
+    android:layout_centerVertical="true"
+    android:layout_margin="20dip"
+     />
+ <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@+string/my_profile" 
+    android:textSize="20sp"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:textColor="@+color/cream"
+    android:textStyle="bold"
+    />   
+     <Button
+    android:id="@+id/save"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@+drawable/addclass_save2x" 
+    android:text="Save"
+    android:gravity="center"
+    android:textColor="@+color/cream"
+    android:textStyle="bold"
+	android:textSize="17sp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentRight="true" 
+    android:layout_margin="20dip"
+     />
+</RelativeLayout>
+
+ <TableLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dip"
+    android:layout_marginLeft="10dip"
+    android:layout_marginRight="10dip"
+    android:id="@+id/profile"
+    >
+   <TableRow >
+       <RelativeLayout 
+           android:layout_width="90dip"
+           android:layout_height="90dip"
+           android:background="@drawable/inner_shadow_round">
+    	<ImageView
+		android:layout_width="fill_parent"
+  		android:layout_height="fill_parent"
+  		android:src="@+drawable/photo"
+  		android:layout_margin="5dip"
+  		android:id="@+id/my_picture"
+		/>
+    	<TextView 
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/edit" 
+    	    android:gravity="center"
+    	    android:textColor="@color/cream"
+    	    android:layout_alignParentBottom="true"
+    	    android:background="@drawable/edit_shape"/>
+    	</RelativeLayout>
+   </TableRow>
+</TableLayout>
+
+<TableLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dip"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="20dip"
+    android:stretchColumns="2"
+    >
+    <TableRow>
+		<ImageView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@+drawable/add_circle"
+	    android:layout_gravity="center_vertical"
+	    android:layout_margin="15dip"
+	    />
+        <TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="20sp"
+	    android:text="@+string/name"
+	    android:textColor="@color/grey_font" />
+        <EditText
+        android:id="@+id/name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="20sp"
+	    android:text="@+string/name"
+	    android:textColor="@color/grey_font" 
+	    android:layout_marginLeft="15dip" 
+	    android:padding="5dip"
+	    android:background="@drawable/inner_shadow_round" />
+        </TableRow>
+	        
+	        <TableRow>    	
+	       	<ImageView
+	        android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@+drawable/add_circle"
+		    android:layout_gravity="center_vertical"
+		    android:layout_margin="15dip" />
+	        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="20sp"
+		    android:text="@+string/school"
+		    android:textColor="@color/grey_font" />
+	        <EditText
+	        android:id="@+id/school"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="20sp"
+		    android:text="@+string/school"
+		    android:textColor="@color/grey_font" 
+		    android:layout_marginLeft="15dip"
+		    android:padding="5dip"
+		    android:background="@drawable/inner_shadow_round" />
+	        </TableRow>
+	        
+	        <TableRow>    	
+	       	<ImageView
+	        android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@+drawable/add_circle"
+		    android:layout_gravity="center_vertical"
+		    android:layout_margin="15dip" />
+	        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="20sp"
+		    android:text="@+string/grade"
+		    android:textColor="@color/grey_font" />
+	        <EditText
+	        android:id="@+id/grade"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="20sp"
+		    android:text="@+string/grade"
+		    android:textColor="@color/grey_font" 
+		    android:layout_marginLeft="15dip"
+		    android:padding="5dip"
+		    android:background="@drawable/inner_shadow_round" />
+	        </TableRow>
+	        
+	        <TableRow>    	
+	       	<ImageView
+	        android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@+drawable/add_circle"
+		    android:layout_gravity="center_vertical"
+		    android:layout_margin="15dip" />
+	        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="20sp"
+		    android:text="@+string/group"
+		    android:textColor="@color/grey_font" />
+	        <EditText
+	        android:id="@+id/group"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="20sp"
+		    android:text="@+string/group"
+		    android:textColor="@color/grey_font" 
+		    android:layout_marginLeft="15dip"
+		    android:padding="5dip"
+		    android:background="@drawable/inner_shadow_round" />
+	   </TableRow>
+</TableLayout>
+
+</LinearLayout>
+ 

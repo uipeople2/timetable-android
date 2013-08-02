@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@+drawable/version_info"
+    > 
+    
+    <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#434343"
+    >
+    <Button
+    android:id="@+id/back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@+drawable/addclass_back2x" 
+    android:text="Back"
+    android:gravity="center"
+    android:textColor="@+color/cream"
+    android:textStyle="bold"
+	android:textSize="17sp"
+    android:layout_centerVertical="true"
+    android:layout_margin="10dip"
+     />
+ <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@+string/todayclass_info"
+    android:textSize="20sp"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:textColor="@+color/cream"
+    android:textStyle="bold"
+    />
+ 
+  
+</RelativeLayout>
+
+   
+    
+    <TextView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="v 0.7"
+    	android:textColor="#ed8078"
+    	android:textStyle="bold"
+		android:textSize="17sp"
+		android:layout_alignParentRight="true"
+		android:layout_marginTop="70dip"
+		android:layout_marginRight="50dip"
+	/>    
+	
+    <TextView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="v 0.7"
+    	android:textColor="#ed8078"
+    	android:textStyle="bold"
+		android:textSize="17sp"
+		android:layout_alignParentRight="true"
+		android:layout_marginTop="105dip"
+		android:layout_marginRight="50dip"
+	/>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+    
+       <TextView
+	        android:id="@+id/edit" 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="0dip"
+	    	android:background="#313439"
+	    	android:text="@+string/choose_to_edit"
+	    	android:textSize="15dip"
+	    	android:gravity="center_vertical"
+	    	android:paddingLeft="20dip"
+	    	
+	 />
+	<com.uipeople.schedule.TimeTableControl android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/table">
+	</com.uipeople.schedule.TimeTableControl>
+</LinearLayout>
